@@ -119,6 +119,7 @@ public class TMPage extends PageObject {
     @Step
     public void clickToLastPage() {
 
+        //added this to ensure if it takes time for page to render then assert on the component that actually validates this state
         waitFor(tableEditButton);
         lastPageButton.click();
         waitFor(500);
